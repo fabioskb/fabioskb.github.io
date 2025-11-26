@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy for [Your App Name]</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 0.5em;
+        }
+        strong {
+            color: #2980b9;
+        }
+        .highlight {
+            background-color: #eaf5ff;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy for Security Camera</h1>
+        <p><strong>Effective Date:</strong> [Date, e.g., November 26, 2025]</p>
+
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>Security Camera</strong> ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App"). By using the App, you agree to the collection and use of information in accordance with this policy.</p>
+
+        <h2>2. Information We Collect</h2>
+        <p>Our App is designed to function with minimal personal data collection. However, its core functionality requires access to certain features and data.</p>
+        
+        <div class="highlight">
+            <p><strong>Core Functionality Data:</strong></p>
+            <ul>
+                <li><strong>Video and Audio Recordings:</strong> The primary function of the App is to record video and, if enabled, audio when motion is detected. <strong>These recordings are stored exclusively on your local device storage by default. We do not have access to, view, or store your recordings on our servers.</strong></li>
+                <li><strong>Google Drive Data (Optional):</strong> If you choose to enable the Google Drive upload feature, the App will require your authorization to upload video files directly to your personal Google Drive account. We use a restricted scope <strong>(drive.file)</strong>, which means the App can only access the files it creates. It cannot see, modify, or delete any other files in your Google Drive.</li>
+            </ul>
+        </div>
+        
+        <p><strong>Permissions Required:</strong></p>
+        <p>To provide its services, the App requires the following permissions:</p>
+        <ul>
+            <li><strong>Camera:</strong> Essential for recording video. The camera is only active when the recording service is explicitly started by you.</li>
+            <li><strong>Microphone (RECORD_AUDIO):</strong> Optional, for capturing audio along with the video. This can be enabled or disabled in the App's settings.</li>
+            <li><strong>Storage (Read/Write):</strong> To save the video recordings to your device's internal storage or SD card.</li>
+            <li><strong>Google Account Access:</strong> Required only if you opt-in to the Google Drive feature. We request permission to manage files created by the App in your Drive.</li>
+            <li><strong>Foreground Service & Run at Boot:</strong> To allow the motion detection service to run in the background or with the screen off, and optionally, to start when the device reboots. A persistent notification will always be visible when the service is active, ensuring transparency.</li>
+        </ul>
+
+        <h2>3. How We Use Your Information</h2>
+        <p>The information and access requested are used solely to provide and improve the App's features:</p>
+        <ul>
+            <li>To **detect motion** and **trigger video recordings**.</li>
+            <li>To **save your video recordings** to your chosen local storage location.</li>
+            <li>To **upload your recordings** to your personal Google Drive account, if you authorize it.</li>
+            <li>To **run the motion detection service** in the background, as required by the App's purpose, with a clear and persistent foreground notification.</li>
+        </ul>
+        <p><strong>We do not sell, trade, or otherwise transfer your personal information or your recordings to outside parties.</strong></p>
+
+        <h2>4. Data Storage and Security</h2>
+        <p><strong>Local Storage:</strong> All video and audio recordings are stored locally on your device. You are in full control of this data. Deleting the App may also delete these files, depending on your device's operating system and the storage location.</p>
+        <p><strong>Google Drive Storage:</strong> When you use the Google Drive feature, your data is subject to Google's Privacy Policy and Terms of Service. We implement secure authentication (OAuth 2.0) to connect to your account, but we do not store your Google password.</p>
+        
+        <h2>5. Prominent Disclosure for Background Service</h2>
+        <div class="highlight">
+            <p><strong>Background Camera and Microphone Access:</strong></p>
+            <p>To fulfill its core purpose as a security camera, our App needs to run in the background to detect motion and record video, even when the App is minimized or the screen is off. To ensure full transparency:</p>
+            <ul>
+                <li>The App will display a <strong>persistent foreground notification</strong> in your device's status bar whenever the recording service is active.</li>
+                <li>This notification clearly indicates that the camera/microphone might be in use and provides a quick way to stop the service.</li>
+                <li>The service only runs when you have explicitly started it from within the App.</li>
+            </ul>
+        </div>
+
+        <h2>6. Third-Party Services</h2>
+        <p>The App uses Google Play Services for authentication (Google Sign-In) and may use Google AdMob for displaying ads. These services have their own privacy policies:</p>
+        <ul>
+            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
+            <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google AdMob</a></li>
+        </ul>
+
+        <h2>7. Children's Privacy</h2>
+        <p>Our App is not intended for use by anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
+
+        <h2>8. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.</p>
+
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+        <p><strong>Email:</strong> <a href="mailto:[Your Contact Email]">[Your Contact Email]</a></p>
+        
+        <footer>
+            <p>&copy; 2025 [Your/Your Company's Name]. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
