@@ -3,132 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Camera App</title>
+    <title>Security Camera - Smart Surveillance</title>
     <style>
-        /* Estilos básicos para uma aparência limpa em qualquer site */
+        :root {
+            --primary: #0F172A; /* Midnight Blue */
+            --accent: #00E5FF;  /* Electric Cyan */
+            --secondary: #3DDC84; /* Android Green */
+            --text: #F8FAFC;
+            --text-dim: #94A3B8;
+            --card-bg: #1E293B;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.7;
-            color: #333;
-            background-color: #f8f9fa;
+            font-family: 'Inter', -apple-system, sans-serif;
             margin: 0;
-            padding: 2rem;
+            padding: 0;
+            background-color: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
         }
 
-        .feature-section {
+        .container {
             max-width: 900px;
-            margin: 2rem auto;
-            padding: 2.5rem;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin: 0 auto;
+            padding: 60px 20px;
         }
 
-        .feature-section h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
+        header {
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 60px;
         }
 
-        .feature-section .tagline {
-            text-align: center;
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
             font-size: 1.2rem;
-            color: #7f8c8d;
-            margin-bottom: 2.5rem;
+            color: var(--text-dim);
+            margin-top: 10px;
         }
 
-        .feature-section p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Estilo para os destaques */
-        .highlight-box {
-            background-color: #eaf5ff;
-            border-left: 5px solid #3498db;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
-
-        .highlight-box strong {
-            color: #2980b9;
-            font-size: 1.15rem;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .highlight-box p {
-            margin-bottom: 0.5rem;
-            font-size: 1.05rem;
-        }
-        
-        /* Estilo para o link da política de privacidade */
-        .privacy-link {
-            text-align: center;
-            margin-top: 3rem;
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .privacy-link a {
-            color: #3498db;
+        .hero-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 35px;
+            background-color: var(--accent);
+            color: var(--primary);
             text-decoration: none;
-            font-weight: 500;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
         }
 
-        .privacy-link a:hover {
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 229, 255, 0.3);
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 30px;
+        }
+
+        .highlight-box {
+            background: rgba(0, 229, 255, 0.05);
+            border-left: 4px solid var(--accent);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--accent);
+            margin-top: 0;
+        }
+
+        h2 {
+            color: var(--secondary);
+            margin-top: 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-dim);
+        }
+
+        .footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
             text-decoration: underline;
         }
 
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.2rem; }
+            .content-section { padding: 25px; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="feature-section">
-        <h1>Advanced Security, Made Effortlessly Simple</h1>
-        <p class="tagline">Turn your Android device into a smart, automated surveillance system that puts you in control.</p>
+    <div class="container">
+        <header>
+            <h1>Security Camera</h1>
+            <p class="tagline">Advanced Security, Made Effortlessly Simple</p>
+            <a href="https://play.google.com/store/apps/details?id=com.fabiosf34.securitycamera" class="hero-btn">Download on Play Store</a>
+        </header>
 
-        <p>
-            Welcome to <strong>Security Camera</strong>, the application that transforms your phone into an intelligent and reliable security solution. Our core mission is to provide peace of mind through powerful, easy-to-use features that prioritize your privacy and control.
-        </p>
+        <section class="content-section">
+            <h2>Your Smart Guardian</h2>
+            <p>Welcome to <strong>Security Camera</strong>, the application that transforms your phone into an intelligent and reliable security solution. Our core mission is to provide peace of mind through powerful, easy-to-use features that prioritize your privacy and control.</p>
 
-        <!-- Destaque 1: Detecção de Movimento e Gravação -->
-        <div class="highlight-box">
-            <strong>Smart Motion Detection &amp; Automated Recording</strong>
+            <div class="highlight-box">
+                <h3>Smart Motion Detection</h3>
+                <p>The app's intelligent algorithm instantly triggers high-quality video recording the moment motion is detected. You no longer need to sift through hours of footage; Security Camera captures only the moments that matter.</p>
+            </div>
+
+            <p>You are always in full command of your data. By default, all recordings are stored securely and locally on your device's internal memory or SD card. We believe your data is yours alone.</p>
+
+            <div class="highlight-box">
+                <h3>Secure Cloud & Background Operation</h3>
+                <p>Enable secure Google Drive integration to automatically upload recordings to a private folder. Security Camera runs seamlessly in the background, even with the <strong>screen turned off</strong>.</p>
+            </div>
+
+            <p>With customizable motion sensitivity, powerful background monitoring, and a commitment to your privacy, Security Camera provides a robust security tool that is both effective and trustworthy.</p>
+        </section>
+
+        <div class="footer">
+            <p>© 2026 FabioDeveloper All rights reserved.</p>
             <p>
-                The app's intelligent algorithm instantly triggers high-quality video recording the moment motion is detected. You no longer need to sift through hours of footage; Security Camera captures only the moments that matter, ensuring you never miss an important event.
+                <a href="./security_camera_privacy_policy.html">Privacy Policy</a> |
+                <a href="mailto:fabiokbdlo@email.com">Support</a>
             </p>
         </div>
-
-        <p>
-            You are always in full command of your data. By default, all recordings are stored securely and locally on your device's internal memory or SD card. We believe your data is yours alone.
-        </p>
-
-        <!-- Destaque 2: Google Drive e Background -->
-        <div class="highlight-box">
-            <strong>Secure Cloud Sync &amp; Uninterrupted Background Operation</strong>
-            <p>
-                For enhanced accessibility, you can enable our secure Google Drive integration. Using a privacy-focused permission, the app will automatically upload your recordings to a dedicated folder in your personal Drive, making your footage accessible from anywhere without ever giving the app access to your other files.
-            </p>
-            <p>
-                Security Camera is built for dependability, with the ability to run seamlessly in the background or even with the <strong>screen turned off</strong>, all while keeping you informed with a persistent status notification.
-            </p>
-        </div>
-
-        <p>
-            With customizable motion sensitivity, powerful background monitoring, and a commitment to your privacy, Security Camera provides a robust security tool that is both effective and trustworthy.
-        </p>
-
-        <!-- /// --- NOVO PARÁGRAFO ADICIONADO AQUI --- /// -->
-        <div class="privacy-link">
-            <p>
-                Your privacy is fundamental to our service. To understand how we handle your data and protect your information, please read our <a href="./security_camera_privacy_policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
-            </p>
-        </div>
-        <!-- /// --- FIM DO NOVO PARÁGRAFO --- /// -->
-
     </div>
 
 </body>
