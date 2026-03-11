@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Lock - Secure Your Digital World</title>
+    <style>
+        :root {
+            --primary: #0F172A; /* Midnight Blue */
+            --accent: #00E5FF;  /* Electric Cyan */
+            --secondary: #3DDC84; /* Android Green */
+            --text: #F8FAFC;
+            --card-bg: #1E293B;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(180deg, rgba(15,23,42,1) 0%, rgba(30,41,59,1) 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #94A3B8;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 229, 255, 0.3);
+        }
+
+        .features {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent);
+        }
+
+        .feature-card h3 {
+            color: var(--accent);
+            margin-top: 0;
+        }
+
+        .footer {
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #64748B;
+        }
+
+        .footer a {
+            color: var(--secondary);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <svg width="32" height="32" viewBox="0 0 108 108" style="background:none">
+                <path d="M54,12L22,24v30c0,20 13.7,38.6 32,44c18.3,-5.4 32,-24 32,-44V24L54,12z" fill="#3DDC84" />
+                <path d="M54,40c-4.4,0 -8,3.6 -8,8v4h-2v12h20V52h-2v-4C62,43.6 58.4,40 54,40z" fill="#0F172A" />
+            </svg>
+            App Lock
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Ultimate Privacy Protection</h1>
+        <p>Keep your personal apps, photos, and messages safe from prying eyes with the most modern and efficient App Lock for Android.</p>
+        <a href="#" class="btn">Download on Play Store</a>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>🛡️ Intelligent Monitoring</h3>
+            <p>Powered by Android Accessibility API for instant detection and zero battery drain. Your apps are locked the millisecond they are opened.</p>
+        </div>
+        <div class="feature-card">
+            <h3>⚡ Biometric Unlock</h3>
+            <p>Seamlessly unlock your apps using Fingerprint or Face Recognition. Fast, secure, and convenient.</p>
+        </div>
+        <div class="feature-card">
+            <h3>🔒 Total Privacy</h3>
+            <p>No data ever leaves your device. We don't use internet permissions for core features, ensuring your passwords remain yours alone.</p>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>© 2026 FabioDeveloper All rights reserved.</p>
+        <p>
+            <a href="app_lock_privacy_policy.html">Privacy Policy</a> |
+            <a href="mailto:fabiokbdlo@gmail.com">Contact Support</a>
+        </p>
+    </div>
+
+</body>
+</html>
