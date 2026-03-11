@@ -3,56 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabio Developer</title>
+    <title>Fabio Developer | Portfolio</title>
     <style>
+        :root {
+            --primary: #0F172A; /* Midnight Blue */
+            --accent: #00E5FF;  /* Electric Cyan */
+            --secondary: #3DDC84; /* Android Green */
+            --text-main: #F8FAFC;
+            --text-dim: #94A3B8;
+            --card-bg: #1E293B;
+            --bg-gradient: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+        }
+
         body {
-            font-family: sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            flex-grow: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
             margin: 0;
-            background-color: #f0f0f0;
-            color: #333;
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            margin-top: 10px;
+        }
+
+        .section-title {
+            text-align: left;
+            margin: 40px 0 20px;
+            font-size: 1.5rem;
+            color: var(--accent);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0, 229, 255, 0.1);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 1.4rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .card .icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            background: rgba(0, 229, 255, 0.1);
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .resources {
+            margin-top: 60px;
+            background: rgba(255,255,255,0.03);
+            padding: 30px;
+            border-radius: 20px;
             text-align: center;
         }
-        .container {
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #0056b3;
-        }
-        a {
-            color: #007bff;
+
+        .btn-link {
+            color: var(--secondary);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
         }
-        a:hover {
+
+        .btn-link:hover {
+            opacity: 0.8;
             text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Fabio Developer</h1>
-        <p>Bem-vindo ao meu site!</p>
-        <p>Aqui você encontra informações e links para meus projetos.</p>
-        <p>
-            <a href="./app-ads.txt" target="_blank">Clique aqui para ver o arquivo app-ads.txt</a>
-        </p>
-        <p>
-            <a href="./security_cam_app.html" target="_blank">Security Camera App</a>
-        </p>
-        <p>
-            <a href="./app_lock.html" target="_blank">App Lock</a>
-        </p>
+        <header>
+            <h1>Fabio Developer</h1>
+            <p>Especialista em Segurança e Ferramentas Android</p>
+        </header>
+
+        <h2 class="section-title">Meus Projetos</h2>
+        <div class="grid">
+            <!-- Card App Lock -->
+            <a href="./app_lock.html" class="card">
+                <div class="badge">SEGURANÇA</div>
+                <div class="icon">🔒</div>
+                <h3>App Lock</h3>
+                <p>Proteja sua privacidade bloqueando aplicativos com biometria e monitoramento inteligente em tempo real.</p>
+                <span class="btn-link">Conhecer projeto &rarr;</span>
+            </a>
+
+            <!-- Card Security Camera -->
+            <a href="./security_cam_app.html" class="card">
+                <div class="badge">UTILITÁRIO</div>
+                <div class="icon">🎥</div>
+                <h3>Security Camera</h3>
+                <p>Transforme seu smartphone em uma câmera de vigilância avançada para monitorar o que importa.</p>
+                <span class="btn-link">Conhecer projeto &rarr;</span>
+            </a>
+        </div>
+
+        <div class="resources">
+            <h2 style="margin-top:0; font-size: 1.2rem;">Recursos para Desenvolvedores</h2>
+            <a href="./app-ads.txt" class="btn-link" target="_blank">
+                📄 Visualizar app-ads.txt (AdMob)
+            </a>
+        </div>
     </div>
 
+    <footer>
+        <p>© 2026 Fabio Developer. Desenvolvido com foco em privacidade e performance.</p>
+    </footer>
 
 </body>
 </html>
